@@ -1,0 +1,322 @@
+====================
+     2020/05/16
+====================
+
+
+   * device/titanium/sepolicy/
+15b5fed qcom: Add legacymm livedisplay sepolicy
+6ab3fa8 sepolicy: add hal_lineage_powershare
+3711a97 sepolicy: qcom: Label custom FM Radio property
+55cbbb1 sepolicy: Assign bash the same label as the default shell
+e6bbba8 sepolicy: recovery: fix neverallows
+89c0cb1 sepolicy: recovery: allow reading fbe key version
+03fc4a0 sepolicy: recovery: allow mounting of internal storage
+5859a8d sepolicy: recovery: allow mounting of usb storage
+cbd2e71 sepolicy: recovery: Allow volume manager write to /sys/*/uevent
+c5fcb1e sepolicy: recovery: Add policy for /dev/block/volmgr
+15f94bf sepolicy: recovery: Fix the volume manager blkid.tab denial
+a7cf00d sepolicy: recovery: Allow reading proc_filesystems
+a0d0550 sepolicy: recovery: Add policy for volume manager
+
+   * frameworks/base/
+faca6060e28 ReadingModeTile: Go away if wellbeing app is enabled
+8f8c898da7e FODCircleViewImpl: Optionally disable FOD night mode
+ad1aea05270 Camera: Rename prevent power key permission
+a64e3d18598 Fix reversed logic
+073631df9b5 TitaniumUtils: Update notch check logic
+
+   * packages/apps/Settings/
+0dee05cb84 Settings: Remove obsolete PreferenceCategory for LiveDisplay
+c852cedd41 Settings: Drop no longer necessary casts when calling findPreference()
+e4d76e52b3 Settings: Hide carrier settings version if empty
+ac6d01c618 LiveDisplaySettings: Hide Reading Mode if wellbeing app is enabled
+d57c13a28a Settings: Adaptive Playback: allow choosing no timeout.
+
+   * vendor/gapps/
+b4b4af7 gapps: Update Play Store
+
+   * vendor/titanium/
+d8f493c6 vendor: welcome Xiaomi Mi A1(tissot)
+
+====================
+     2020/05/15
+====================
+
+
+   * build/make/
+09d6e5d31 Merge tag 'android-10.0.0_r35' of https://android.googlesource.com/platform/build into ten
+dee924a3f build: add more useful info after build
+a35e1ff0f Merge tag 'android-10.0.0_r33' of https://android.googlesource.com/platform/build into ten
+f5e938e73 Merge tag 'android-10.0.0_r31' of https://android.googlesource.com/platform/build into ten
+441c6d121 build: use ro.build.date for build date
+ff5be245b Merge tag 'android-10.0.0_r27' of https://android.googlesource.com/platform/build into ten
+301066a44 check_boot_jars: Add IFAA Manager to whitelist
+38235b060 Fix zsh compatibility issue in build/envsetup.sh
+f2c9f5630 Support PRESIGNED in soong_app_prebuilt.mk
+7f922a582 envsetup: Automatically set CCACHE_EXEC to the system's ccache
+0d763d71b edify: bring back SetPermissionsRecursive
+44b5f8753 Revert "Remove the obsolete UnpackPackageDir() in edify generator"
+4bbb101b4 releasetools: Move system mount handling to backuptool
+55efd7de9 releasetools: squash backuptool support
+
+   * device/titanium/sepolicy/
+552ab29 vendor: Introduce a new flag to exclude fuseblk sepolicy
+d037646 sepolicy: Fix Lawnchair denials
+10d4b76 common: add rules for QS BG picker
+
+   * frameworks/base/
+aba73e47dd1 telephony: URI cannot be created with negative subIds
+cbe763baa72 FODCircleView: Let us call show() when mIsBouncer() && !isPinOrPattern()
+47b8f2353a5 SystemUI: Custom Text Clock Customizations [1/2]
+b1fcd3457cf Improve Lockscreen CustomTextClock Style
+39914f1fe79 Lockscreen Clock Styles: Introduce Q style text clock [1/2]
+f7898bdfcfd SystemUI: Fix minute digits for accent based lockscreen clock style
+a89c9d642a4 base: add Bootleg's Date Styles [1/2]
+8c6b2625aac base: add Q beta pill background [1/2]
+19abdbd0453 Introduce lockscreen date styles [1/2]
+fc5bbee4878 Decrease line spacing in sammy clock styles
+d09f00ddd6c SystemUI: fix accent based lockscreen clocks
+c15360b04fc Always keep clock widget visible while dozing
+8fa1ebdf257 SystemUI: Option to hide lockscreen clock & date [1/2]
+3e3c142e75c SystemUI: Lockscreen clock styles: Add sammy accent hour clock [1/2]
+ae6b2418596 SystemUI: Lockscreen clock styles: Add accent clocks from pie [1/2]
+0feed068f39 SystemUI: Lockscreen clock styles: Add sammy accent clock and a variant [1/2]
+0b66c6c04a5 Introduce lockscreen clock/date styles [1/2]
+b2314d3f3b3 FOD Animations: convert to webp icons
+6ed79f5e2cf FODCircleView: Show while bouncer is requesting Pattern or PIN
+30ac537034f SystemUI: Add OP Energy FOD animation from OnePlus 8 Pro [1/2]
+42d49dae306 SystemUI: Update OP FOD icon from OnePlus 8 Pro [1/2]
+03e676d0883 SystemUI: Fix showing duplicated charging status
+8262d76b83d SystemUI: Hide gradient behind QS panel
+2eb51842721 SystemUI: Hide QS divider
+480f2f203a9 SystemUI: Nope. This shouldn't be here
+020633f62c0 SystemUI: Only add GarbageMonitor tile to default tiles on ENG builds
+17cea4800d3 base: Lower the internal audio capture restriction
+235ef105e27 TitaniumUtils: Import Restart SystemUI API
+bb97561317a [1/2] SystemUI: Introduce Adaptive Playback
+139a2e56ba7 SystemUI: Fix custom lockscreen wallpaper
+8d47a0131c8 Add more fonts[2/2]
+012c98d0e0f OneUI-like settings actionbar [1/3] todo: add settings observer so you won't need to restart settings app to toggle it
+6cc2eaa0e33 QS Header data usage info [1/2]
+9397e00108c base: Add Touch HIDL support
+4748b059abe Updates to various icons
+7003b745274 base: Whitelist more permissions needed for SystemUIGoogle
+c517c6973f3 FrameworkBase: Fix NullPointerException of AMS
+3162469e6b5 Add mechanism to improve consistancy of notification
+a701b4528af SystemUI: Make scramble PIN layout Multi-User friendly
+4931141058c SystemUI: Make header image height offset user configurable [1/2]
+8f24c094939 SystemUI: respect status bar header height also in edit mode
+f0e65c22b50 Re-add WPS implementation (2/3)
+7102dffeed8 QSFooterImpl: Animate multiuser avatar
+2275d8c9b23 base: QS themes [1/2]
+dee8120bce3 base: SystemUI: Allow hiding the lock icon on lockscreen [1/2]
+32e450f8cd3 SystemUI: QS: Language toggle tile
+28f8a69b0cd SystemUI: Bring back QS Drag Handle
+280bb4e458c NotificationManagerService: Disable Notifications vibration [1/2]
+7e0d2a2ef39 Add an option to change the device hostname (1/2)
+7bae3eea90c Reduce log verbosity: Don't spam logcat
+f00a921ad81 Guard in short-circuit evaluations for stringSplit methods.
+7362636dcf5 Cache pin algorithms in PinSet
+585665a9947 Cache the global proxy to avoid fetching it for every request
+0c78f39ccb3 Cache KeyStoreService
+a9eb92c5eff (Point) Only calculate sin and cos once
+095dee76267 Allow tuning of heaptargetutilization
+3cfd92c58cd Don't change public API
+931ca825a38 Update date on keyguard when ticking past midnight
+fb88ece53c9 Select the proper request list size
+6186af6294e TextClock: Improve English strings
+a645ca99a02 TextClock: Allow font resizing
+80fbdb707bf TextClock: Add font styles
+f15f514a2dd Lockscreen font size: Clock and date improvements
+12bf5813a5d Default Clock preview: Add a static widget
+2e618b0d872 LS OwnerInfo Fonts & Size Options [1/2]
+966ea33dd55 Lock Clock & Date Font Sizes [1/2]
+ae89472768d Lockscreen Date Fonts [1/2]
+0e0cf3e6a2a Lockscreen Clock Widget Fonts [1/2]
+52fdbb73125 PM: Signature spoofing [1/2]
+49678e5873e FWB: Sensor block per-package switch (1/2)
+41d6d3dbdaa base: SystemUI: make storage notification channel blockable
+7c1a748c583 Recents: Fix NPE while changing themes
+4a2984d3b49 display: Validate activePhysIndex before access
+9407df92244 PM: Allow disabling components per-device
+de7a105de63 SystemUI: Reduce Location icon inset
+747190abcae Option to hide Adb notification icon (1/2)
+1016326e8bc SystemUI: QS: Add dynamic Immersive Mode tile
+7306918178b base: Omni Doze settings & TimeInState [1/2]
+a3d7e173324 Graphics: Fix NPE in Gdrive
+3c9271bfb50 Disable tuner pref for battery
+ed46336b97a Text battery style: show a bolt ⚡ when charging
+e6f88cc7b60 policy: add more orientation sanity checks
+d29a4332740 Keep recent tasks for more time in memory
+b97bc95c963 SystemUI: DataSwitchTile: Use MD2 drawables
+b2a2f037033 base: Introduce DataSwitchTile
+1732771eb38 Add back increasing ring feature (1/3)
+49072d68d53 SystemUI: Improve QS header info layout
+7b9bb1f3f6e SystemUI: QS header improvements
+925025b63c7 SystemUI: fix layout of qs header info
+439a3c3f4be base: Add qs status bar header image [1/2]
+e22cde120ce Merge tag 'android-10.0.0_r35' of https://android.googlesource.com/platform/frameworks/base into ten
+
+   * frameworks/opt/telephony/
+3ce39baac telephony: Revert caf's APN changes
+8337242a1 Fetching IMSI from RUIM properly
+4de810431 Fix wrong APN list issue for multimode SIM cards.
+
+   * packages/apps/Settings/
+5254873199 Button text for app space management is overwritten
+9fb7b2e64f Bomb Settings suggestions with napalm - Episode II
+b9b78d993e Bomb Settings suggestions with napalm
+
+   * packages/apps/TiElements/
+5e2d738 TiElements: Custom Text Clock Customizations [2/2]
+c01f26d TiElements: cleanup locscreen clock style code
+45282ad TiElements: Date styles: Add Bootleg's styles [2/2]
+7f63adb TiElements: Date styles: Add Q beta pill [2/2]
+3518b61 TiElements: Lockscreen date styles [2/2]
+d8b56f2 TiElements: Lockscreen clock styles: Add sammy accent hour clock [2/2]
+6a96b4e TiElements: Introduce lockscreen clock styles [2/2]
+37ae58f TiElements: Add OP Energy FOD animation from OnePlus 8 Pro [2/2]
+2f0f2d5 TiElements: QS Header data usage info [2/2]
+61cf5d4 TiElements: OneUI-like settings actionbar [3/3] todo: add settings observer so you won't need to restart settings app to toggle it
+144ba40 TiElements: Make header image height user configurable [2/2]
+1f4ae5d TiElements: QS themes [2/2]
+e472fbf TiElements: Allow hiding the lock icon on lockscreen [2/2]
+4c40eaa TiElements: Disable Notifications vibration [2/2]
+d0884b1 TiElements: LS OwnerInfo Fonts & Size Options [2/2]
+4fb7be8 TiElements: Lock Clock & Date Font Sizes [2/2]
+fcb7d1d TiElements: Lockscreen Date Fonts [2/2]
+d9c95a5 TiElements: Lockscreen Clock Widget Fonts [2/2]
+0e87947 TiElements: Signature spoofing [2/2]
+cef7844 TiElements: Sensor block per-package switch [2/2]
+f8ce371 TiElements: Option to hide Adb notification icon (2/2)
+f09dfa3 TiElements: Omni Doze settings & TimeInState [2/2]
+54a09be TiElements: Add qs status bar header image [2/2]
+1dc8b2e Evolver: Update OP FOD icon from OnePlus 8 Pro [2/2]
+
+   * system/sepolicy/
+f7e76da4 Allow adb start/stop mdnsd via ctl.start/stop
+0f1fcf5d HACK: allow system apps to modify system props
+b3aae288 sepolicy: Resolve theme prop denial
+ff705920 sepolicy: Relabel wifi. properties as wifi_prop
+eba20ff6 sepolicy: Allow recovery to alter /
+aad286e6 sepolicy: whitelist recovery from node creation neverallow
+213d31f5 sepolicy: Add sdcard_posix_contextmount_type attribute
+6ad3a18b audioserver: allow audioserver to generate audio HAL tombstones
+
+   * vendor/titanium/
+f50665ad vendor: stable version bump to v1.2
+
+====================
+     2020/05/14
+====================
+
+
+====================
+     2020/05/13
+====================
+
+
+   * packages/apps/Recorder/
+b0f788c Revert "ScreenService: start recording on a background Thread"
+
+====================
+     2020/05/12
+====================
+
+
+====================
+     2020/05/11
+====================
+
+
+====================
+     2020/05/10
+====================
+
+
+====================
+     2020/05/09
+====================
+
+
+====================
+     2020/05/08
+====================
+
+
+====================
+     2020/05/07
+====================
+
+
+====================
+     2020/05/06
+====================
+
+
+   * manifest/
+905fd13 manifest: Track OmniStyle
+
+   * packages/apps/OmniStyle/
+284c9da OmniStyle: Kang header packs from Bootleggers
+b24464e OmniStyle: hentai-header: fix canvas size issues
+e55ac71 OmniStyle: hentai-header: optimize some images
+5d5bc15 OmniStyle: bring more hentainess
+6c51a67 OmniStyle: extend hentai header pack
+662bad4 OmnyStyle: add hentai header pack
+7afb056 OmniStyle: Add CustomHeader by GMLR
+03c4710 Corrections for Q
+7f0d496 OmniStyle: Add JLA, Xmen and Avengers headers
+7771d08 OmniStyle: Improve GoT header pack
+9469399 OmniStyle: Add GoT header pack
+aac05af OmniStyle: Added 'Colorful' headers
+83b7cc8 OmniStyle: Add more headers
+f124ee9 Removed the things not needed
+45a78e5 OmniStyle: qs status bar header image [3/4]
+0b238fe OmniStyle: theme compose: fix button text color to white
+bbfcc00 OmniStyle: leverage app overlays
+a2eec6a OmniStyle: remove temporary launcher activity
+
+   * vendor/titanium/
+e3bce998 vendor: add OmniStyle
+
+====================
+     2020/05/05
+====================
+
+
+   * frameworks/av/
+63b948f9b Merge tag 'android-10.0.0_r35' of https://android.googlesource.com/platform/frameworks/av into ten
+
+   * manifest/
+f808684 Merge tag 'android-10.0.0_r35' of https://android.googlesource.com/platform/manifest into ten
+
+   * packages/apps/Settings/
+10fc40ec5f Merge tag 'android-10.0.0_r35' of https://android.googlesource.com/platform/packages/apps/Settings into ten
+
+   * packages/services/Telephony/
+75901602e Merge tag 'android-10.0.0_r35' of https://android.googlesource.com/platform/packages/services/Telephony into ten
+
+   * system/bt/
+051b72c6e Merge tag 'android-10.0.0_r35' of https://android.googlesource.com/platform/system/bt into ten
+
+====================
+     2020/05/04
+====================
+
+
+====================
+     2020/05/03
+====================
+
+
+   * vendor/titanium/
+4566d3dd Welcome Mi 6X (wayne)
+0da02654 Add more fonts [1/2]
+41cbff3e vendor: add timestamp for OTA
+06e26b7d extract_utils: Generate deodexed apk/jar with consistent checksum
+e3651e9e extract_utils: Fix doubled path separator
+2705206b soong_config: Add TARGET_IGNORES_FTP_PPTP_CONNTRACK_FAILURE
+7b8ffb94 vendor: Improve roomservice fallback branch
+d0c24d05 Welcome MI 8 Lite (platina) and Xiaomi Mi9 (cepheus)
+
